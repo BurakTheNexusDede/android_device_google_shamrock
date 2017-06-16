@@ -136,6 +136,9 @@ OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Filesystem
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
