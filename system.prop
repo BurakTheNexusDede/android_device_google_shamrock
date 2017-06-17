@@ -55,6 +55,9 @@ persist.dpm.nsrm.bkg.evt=3955
 # Dex2oat threads for faster app installation
 ro.sys.fw.dex2oat_thread_count=4
 
+# Device
+ro.product.model=GM 5 Plus
+
 # Display
 debug.egl.hw=0
 debug.enable.sglscale=1

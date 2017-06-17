@@ -15,10 +15,10 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common DU stuff.
-$(call inherit-product, vendor/du/config/common_full_phone.mk)
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
 # Inherit from shamrock device
 $(call inherit-product, device/google/shamrock/device.mk)
@@ -27,7 +27,7 @@ $(call inherit-product, device/google/shamrock/device.mk)
 BOARD_VENDOR := google
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := shamrock
-PRODUCT_NAME := du_shamrock
+PRODUCT_NAME := aosp_shamrock
 PRODUCT_MANUFACTURER := General Mobile
 PRODUCT_MODEL := GM 5 Plus
 TARGET_VENDOR := google
@@ -40,3 +40,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=qcom/shamrock/shamrock:7.1.1/NNH26/3945561:user/dev-keys \
     PRIVATE_BUILD_DESC="shamrock-user 7.1.1 NNH26 3945561 release-keys"
 endif
+  
+# Build Magisk
+DEFAULT_ROOT_METHOD := magisk
